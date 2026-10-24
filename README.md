@@ -54,15 +54,7 @@ Favorite a promising opportunity, record a note, and update its status. Return t
 
 ## Architecture at a glance
 
-```mermaid
-flowchart LR
-    User[Business user] --> UI[Browser workspace]
-    UI --> App[Node.js application]
-    Sources[Procurement sources] --> App
-    App --> Store[(Application data)]
-    App --> Alerts[Notification adapters]
-    App -. Optional .-> AI[AI provider]
-```
+![Conceptual architecture: business user, browser, application, data, notification adapters and optional AI integration](assets/architecture.svg)
 
 This is a conceptual view. It intentionally omits server locations, credentials, internal endpoints, and database details. The local screenshot session uses synthetic JSON fixtures and makes no external API requests.
 
